@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -6,13 +7,14 @@ import CTASection from "@/components/CTASection";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen bg-background">
+      <Navbar />
       <Hero />
       <ProblemSection />
       <FeaturesSection />
       <DarkPatternsExamples />
       <CTASection />
-    </main>
+    </div>
   );
 };
 

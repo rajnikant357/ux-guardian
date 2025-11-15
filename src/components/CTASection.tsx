@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Download, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -23,21 +24,25 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center pt-4">
-            <Button 
-              size="lg" 
-              className="gap-2 bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl"
-            >
-              <Download className="w-5 h-5" />
-              Install PrivacyShield
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="gap-2 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
-            >
-              <Github className="w-5 h-5" />
-              View on GitHub
-            </Button>
+            <Link to="/auth">
+              <Button 
+                size="lg" 
+                className="gap-2 bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl"
+              >
+                <Download className="w-5 h-5" />
+                Install PrivacyShield
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="gap-2 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                <Github className="w-5 h-5" />
+                Learn More
+              </Button>
+            </Link>
           </div>
           
           <div className="flex items-center justify-center gap-8 pt-8 text-primary-foreground/80 text-sm">
