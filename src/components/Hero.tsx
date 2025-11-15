@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Download } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-shield.jpg";
 
 const Hero = () => {
@@ -27,13 +28,17 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity shadow-lg">
-                <Download className="w-5 h-5" />
-                Install Extension
-              </Button>
-              <Button size="lg" variant="outline">
-                Watch Demo
-              </Button>
+              <Link to="/auth">
+                <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity shadow-lg">
+                  <Download className="w-5 h-5" />
+                  Install Extension
+                </Button>
+              </Link>
+              <Link to="/watch-demo">
+                <Button size="lg" variant="outline">
+                  Watch Demo
+                </Button>
+              </Link>
             </div>
             
             <div className="flex items-center gap-8 pt-4">
